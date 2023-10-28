@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div class="container">
+
+    <section class="heading">
+        <label for="title" class="heading-title">What's up,</label>
+        <input type="text" id="title" name="titleInput" placeholder="Your Name" >
+    </section>
+
+   
+    <form action="#" class="create-todo-list" >
+        <label for="todoInput" class="todoInput">CREATE A TODO</label>
+        <p class="create-todo-listP">What's on your todo list ?</p>
+        <input type="text" id="todoInput" name="todoInput" placeholder="e.g. get a milk">
+        
+    </form>
+
+<!-- **************************************** -->
+<form action="" class="category">
+    <p class="create-todo-listP">Pick a category</p>
+    <div class="categoryContainer">
+        <label class="categoryLabel" >
+            <input type="radio" name="category" id="category1" value="business">
+            <span class="round business"></span>
+            <p class="todoInput">Business</p>
+        </label>
+
+        <label class="categoryLabel">
+            <input type="radio" name="category" id="category2" value="personal">
+            <span class="round personal"></span>
+            <p class="todoInput">Personal</p>
+        </label>
+
+    </div>
+</form>
+
+<!-- *************************************************************** -->
+    <div class="containerBtn">
+        <button class="addTodobtn">Add todo</button>
+    </div>
+<div class="tdlcontainer">
+<p class="todoInput">TODO LIST</p>
+</div>
+
+<div class="tasks">
+ 
+
+</div>   
+  </div>
+    
+
+
+    <script src="App.js"></script>
+</body>
+</html>

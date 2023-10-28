@@ -208,44 +208,7 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 }
 
-
-
-
-
-/* .bubble2{
-margin-right: 0.4em;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 20px;
-height: 20px;
-border-radius: 50%;
-border: 2px solid #4b50cb;
-box-shadow: 1px 0px 14px 0px rgba(69, 73, 185, 0.2);  
-} */
-
-/* .bubble2::before{
-content: '';
-display: block;
-opacity: 0;
-width: 0px;
-height: 0px;
-background-color:#4b50cb;
-box-shadow: 1px 0px 14px 0px rgba(69, 73, 185, 0.2);
-border-radius: 50%;
-transition: 0.2s ease-in-out;
-} */
-
-/* .bubble2::before {
-   
-} */
-
-
-
 .editBtn{
-    /* position: absolute;
-    right: 80px;
-    width: 50px; */
     height: 30px;
     border-radius: 6px;
     color: #fff;
@@ -265,9 +228,6 @@ transition: 0.2s ease-in-out;
 }
 
 .deleteBtn{
-    /* position: absolute;
-    right: 5px;
-    width: 70px; */
     height: 30px;
     border-radius: 6px;
     color: #fff;

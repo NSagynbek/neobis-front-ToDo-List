@@ -61,11 +61,15 @@ function createTodoElement(todo) {
         outter.classList.add("outterPartBussiness")
     }
 
+    else {
+        outter.classList.add("outterPartPersonal")
+    }
+
   
 console.log(todo)
 
     const taskInput = document.createElement("input");
-    taskInput.classList.add("todoInput");
+    taskInput.classList.add("todoInput2");
     taskInput.setAttribute("id","taskInput")
     taskInput.value = todo.text;
     taskInput.setAttribute("readonly", "readonly");

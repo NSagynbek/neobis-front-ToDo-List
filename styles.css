@@ -9,7 +9,6 @@ align-items: center;
 margin: auto;
 padding: 1em;
 background: #F8F8F8;
-
 }
 
 .heading{
@@ -17,8 +16,9 @@ display: flex;
 align-items: center;
 height: 40px;
 padding: 0.5em;
-width: 600px;
-    
+width: 60%;
+max-width: 40%;
+min-width: 390px;
 }
 
 .heading-title{
@@ -27,6 +27,7 @@ font-size: 25px;
 font-family: 'Hind', sans-serif;
 font-weight: 700px;
 color:rgba(11, 19, 42, 1);
+min-width: 150px;
 }
 
 #title{
@@ -38,12 +39,15 @@ color:rgba(11, 19, 42, 1);
 outline: none;
 border: none;
 background: #F8F8F8;
+width: 65%;
 }
 
 .create-todo-list{
 display: flex;
 flex-direction: column;
-width: 600px;
+width:60%;
+max-width: 40%;
+min-width: 390px;
 padding: 0.5em;
 }
 
@@ -88,7 +92,9 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 .category{
 display: flex;
 flex-direction: column;
-width: 600px;
+width:60%;
+max-width: 40%;
+min-width: 390px;
 }
 
 .categoryContainer{
@@ -157,11 +163,13 @@ opacity: 1;
 
 
 .containerBtn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+width:60%;
+max-width: 40%;
+min-width: 390px;
+height: 70px;
 }
 
 .addTodobtn{
@@ -188,7 +196,9 @@ cursor: pointer;
 display: flex;
 justify-content: center;
 align-items: center;
-width: 600px;
+width:60%;
+max-width: 40%;
+min-width: 390px;
 justify-content: flex-start;
 }
 
@@ -196,7 +206,8 @@ justify-content: flex-start;
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 600px;
+width:100%;
+max-width: 95%;
 background-color: #fff;
 border-radius: 10px;
 height: 60px;
@@ -204,21 +215,21 @@ margin: 0.5em;
 padding-left: 0.5em;
 padding-right: 0.5em;
 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
+position: relative;
+transition: 0.25s ease-in-out;
 
 }
 
 .editBtn{
-    height: 30px;
-    border-radius: 6px;
-    color: #fff;
-    background-color:#c13e8a ;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin: 0.3em;
- 
-    
+height: 30px;
+border-radius: 6px;
+color: #fff;
+background-color:#c13e8a ;
+border: none;
+outline: none;
+cursor: pointer;
+text-transform: uppercase;
+margin: 0.3em;   
 }
 
 .editBtn:hover{
@@ -227,16 +238,14 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .deleteBtn{
-    height: 30px;
-    border-radius: 6px;
-    color: #fff;
-    background-color:#cf5b1d ;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    
-
+height: 30px;
+border-radius: 6px;
+color: #fff;
+background-color:#cf5b1d ;
+border: none;
+outline: none;
+cursor: pointer;
+ text-transform: uppercase;
 }
 
 .deleteBtn:hover{
@@ -309,13 +318,8 @@ background: #ffc766;
 
 
 
-#taskInput{
-    width: 450px;
-   
-}
 
 .outterPartPersonal{
-margin-top: 0.6em;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -339,7 +343,6 @@ transition: 0.2s ease-in-out;
 }
 
 .outterPartBussiness{
-    margin-top: 0.6em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -374,14 +377,14 @@ opacity: 1;
 }
     
 
-input[type="checkbox"]:checked ~ .todoInput {
+input[type="checkbox"]:checked ~ .todoInput2 {
     opacity: 0.50;
     text-decoration: line-through;
     transition: 0.25s ease-in;
 }
 
 
-.todoInput:not(:read-only){
+.todoInput2:not(:read-only){
     color:#cb5198 ;
  }
  
@@ -389,3 +392,40 @@ input[type="checkbox"]:checked ~ .todoInput {
     display: none;
  }
 
+
+ @media(max-width:1461px){
+    .todoListsSection{
+        height:150px ;
+    }
+
+    .actions{
+        position: absolute;
+        right: 10px;
+        top: 95px;
+    }
+
+  
+}
+
+
+
+ .tasks{
+  width: 60%;
+  max-width: 40%;
+  min-width: 390px;
+ }
+
+.todoInput2{
+margin: 0;
+font-family: Rubik;
+font-size: 25px;
+font-family: 'Hind', sans-serif;
+font-weight: 10px;
+color:rgba(11, 19, 42, 1); 
+outline: none;
+border: none;  
+background-color: #fff;
+width: 85%;
+max-width: 70%;
+min-width: 300px;
+}

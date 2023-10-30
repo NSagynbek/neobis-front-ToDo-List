@@ -141,7 +141,7 @@ function getLocalTodos() {
 function removeLocalTodos(todo) {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];
     console.log(todos)
-    const text = todo.querySelector(".todoInput").value;
+    const text = todo.querySelector(".todoInput2").value;
     console.log(text)
     const todoIndex = todos.findIndex((item) => item.text === text);
 

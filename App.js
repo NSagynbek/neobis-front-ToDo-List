@@ -2,6 +2,8 @@ const form = document.querySelector(".create-todo-list");
 const input = document.querySelector("#todoInput");
 const listElements = document.querySelector(".tasks");
 const addTodoButton = document.querySelector(".addTodobtn");
+const personalCategory = document.getElementById("category1");
+const bussinessCategory = document.getElementById("category2");
 
 
 document.addEventListener("DOMContentLoaded", getLocalTodos);
@@ -10,21 +12,22 @@ addTodoButton.addEventListener("click", () => {
     const task = input.value.trim();
 
     if (!task) {
-        alertMessage ()
+        alertMessage ();
         return; 
     }
-let category = "";
+
   
     const todo = {
-        text: task,
-        completedStatus: false,
-        status: category, 
+        text: task,   
+        class:"" 
     };
 
+
+    createTodoElement(todo);
     saveLocalTodos(todo);
 
     
-    createTodoElement(todo);
+   
 
     
     input.value = "";
@@ -34,8 +37,32 @@ let category = "";
 
 
 function createTodoElement(todo) {
-    const todoListSection = document.createElement("div");
+    const todoListSection = document.createElement("label");
     todoListSection.classList.add("todoListsSection");
+    const outter = document.createElement("span")
+    outter.setAttribute("id","outterPart")
+    
+
+    if(bussinessCategory.checked){
+        outter.classList.add("outterPartBussiness")
+        todo.class = "outterPartBussiness";
+        
+        
+    } 
+    else if(personalCategory.checked){
+        outter.classList.add("outterPartPersonal") 
+        todo.class = "outterPartPersonal";
+    }
+
+    else if (todo.class === "outterPartPersonal"){
+        outter.classList.add("outterPartPersonal")
+    }
+    else if (todo.class === "outterPartBussiness"){
+        outter.classList.add("outterPartBussiness")
+    }
+
+  
+console.log(todo)
 
     const taskInput = document.createElement("input");
     taskInput.classList.add("todoInput");
@@ -59,6 +86,7 @@ function createTodoElement(todo) {
     radio.setAttribute("id", "myCheckbox");
 
     todoListSection.appendChild(radio);
+    todoListSection.appendChild(outter)
     actions.appendChild(editBtn);
     actions.appendChild(deleteBtn);
     todoListSection.appendChild(taskInput);
@@ -108,7 +136,9 @@ function getLocalTodos() {
 
 function removeLocalTodos(todo) {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];
+    console.log(todos)
     const text = todo.querySelector(".todoInput").value;
+    console.log(text)
     const todoIndex = todos.findIndex((item) => item.text === text);
 
     if (todoIndex !== -1) {
@@ -116,6 +146,9 @@ function removeLocalTodos(todo) {
         localStorage.setItem("todos", JSON.stringify(todos));
     }
 }
+
+
+
 
 
 function alertMessage (){
